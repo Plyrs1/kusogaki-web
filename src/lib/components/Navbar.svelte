@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
   import Wave from './Wave.svelte'
   interface NavigationItem {
     label: string
@@ -25,7 +27,7 @@
   </div>
   <div class="flex justify-between m-0 w-full p-4 md:p-8">
     <a
-      href="/#"
+      href="{base}/#"
       class="text-3xl md:text-4xl lg:text-5xl font-semibold whitespace-nowrap items-center z-20 self-center  text-kusogaki-purple"
       on:click={isNavbarOpen ? toggleNavbar : null}
       >クソガキ
@@ -48,7 +50,7 @@
       <ul class="flex flex-col mt-32">
         {#each navItems as navItem}
           <li class="py-4">
-            <a href={navItem.href} class="text-4xl p- text-kusogaki-purple" on:click={toggleNavbar}>{navItem.label}</a>
+            <a href="{base}{navItem.href}" class="text-4xl p- text-kusogaki-purple" on:click={toggleNavbar}>{navItem.label}</a>
           </li>
         {/each}
       </ul>

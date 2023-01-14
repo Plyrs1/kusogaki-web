@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths'
   interface TeamBadge {
     name: string
     color: string
@@ -126,11 +127,11 @@
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 px-6">
   {#each teamData as team}
     <div class=" bg-kusogaki-purple rounded-md">
-      <a href="/#">
+      <a href="{base}/#">
         <img class="rounded-t-md w-full" src={team.pic} alt="" />
       </a>
       <div class="m-2">
-        <a href="/#">
+        <a href="{base}/#">
           <h5 class="text-sm sm:text-lg font-bold text-white my-2">{team.name}</h5>
         </a>
         <!-- <div class="grid grid-cols-2 auto-cols-max gap-1 w-full"> -->

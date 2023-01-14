@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
   import Wave from './Wave.svelte'
 </script>
 
@@ -15,7 +17,7 @@
       <p class="text-white font-bold">CREW</p>
     </div>
     <div class="col-span-2 text-white text-xs md:text-sm lg:text-lg font-bold">
-      <a href="/events">EVENTS</a> . <a href="/community">COMMUNITY</a> . <a href="/badges">BADGES</a>
+      <a href="{base}/events">EVENTS</a> . <a href="{base}/community">COMMUNITY</a> . <a href="{base}/badges">BADGES</a>
     </div>
   </div>
 </div>

@@ -1,10 +1,14 @@
 <script lang="ts">
   import '$lib/main.css'
 
+  import { base } from '$app/paths'
   import Footer from '$lib/components/Footer.svelte'
   import Navbar from '$lib/components/Navbar.svelte'
 </script>
 
+<svelte:head>
+  <link rel="icon" href="{base}/favicon.ico" />
+</svelte:head>
 <main class="text-center p-0 mx-0 w-screen h-screen bg-cover bg-center">
   <Navbar />
   <div class="fixed left-0 right-0 top-0 bottom-0">
