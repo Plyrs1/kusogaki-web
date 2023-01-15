@@ -5,6 +5,7 @@
   "singleQuote": true,
   "trailingComma": "none",
   "endOfLine": "auto",
+  "proseWrap": "always",
   "printWidth": 150,
   "plugins": ["prettier-plugin-svelte"],
   "pluginSearchDirs": ["."],
