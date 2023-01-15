@@ -162,7 +162,6 @@
         <a href={team.profileUrl} target="_blank" rel="noreferrer">
           <h5 class="text-sm sm:text-lg font-bold text-white my-2">{team.name}</h5>
         </a>
-        <!-- <div class="grid grid-cols-2 auto-cols-max gap-1 w-full"> -->
         <div class="flex flex-wrap gap-1 w-full">
           {#each team.badges as badge}
             <span class="{badgeLists[badge].color} text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded">{badgeLists[badge].name}</span>
