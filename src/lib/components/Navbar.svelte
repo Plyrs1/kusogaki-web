@@ -1,8 +1,9 @@
 <script lang="ts">
-  import type { AfterNavigate } from '@sveltejs/kit'
+  import { onDestroy } from 'svelte'
 
-  import { afterNavigate, beforeNavigate } from '$app/navigation'
+  import { beforeNavigate } from '$app/navigation'
   import { base } from '$app/paths'
+  import { page } from '$app/stores'
   import { isScrolled } from '$lib/stores/page'
 
   import Wave from './Wave.svelte'
@@ -19,12 +20,15 @@
 
   let isNavbarOpen = false
   let currentPage = '/'
+
+  const unsubscribePage = page.subscribe((value) => {
+    currentPage = value.route.id || ''
+  })
   beforeNavigate(() => {
     $isScrolled = false
   })
-  afterNavigate((nav: AfterNavigate) => {
-    currentPage = nav.to?.route.id || ''
-    console.log(currentPage)
+  onDestroy(() => {
+    unsubscribePage()
   })
   function toggleNavbar(): void {
     console.log(`isNavbarOpen : ${isNavbarOpen}`)
@@ -62,7 +66,7 @@
             <a
               href="{base}{navItem.href}"
               class="text-3xl text-kusogaki-purple font-lemon-milk {currentPage === navItem.href ? 'active' : ''}"
-              on:click={toggleNavbar}>{navItem.label}</a
+              on:click={() => (isNavbarOpen = false)}>{navItem.label}</a
             >
           </li>
         {/each}
