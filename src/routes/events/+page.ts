@@ -30,8 +30,8 @@ async function getEvents(fetch: (url: string, options: RequestInit) => Promise<R
   return b.map((data: string) => {
     const aa = data.split(']')
     return {
-      img: aa[0].split('(')[1].split(')')[0],
-      href: aa[1].split('(')[1].split(')')[0],
+      img: aa[0].split('(')[1].split(')')[0].trim(),
+      href: aa[1].split('(')[1].split(')')[0].trim(),
       // TODO: use event start date. for now it's using
       // anilist activity creation date
       startDate: new Date(item.data.Activity.createdAt),
