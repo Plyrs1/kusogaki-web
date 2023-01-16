@@ -13,23 +13,20 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Kozuka Gothic';
-  src: url('/assets/fonts/kozgopro-regular-webfont.woff') format('woff');
-  src: url('/assets/fonts/kozgopro-regular-webfont.woff2') format('woff2');
-  font-weight: normal;
   font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: local('Kozuka Gothic Pro B'), url('/assets/fonts/KozGoProBold.woff') format('woff');
 }
-
 @font-face {
   font-family: 'Kozuka Gothic';
-  src: url('/assets/fonts/kozgopro-bold-webfont.woff') format('woff');
-  src: url('/assets/fonts/kozgopro-bold-webfont.woff2') format('woff2');
+  font-style: normal;
   font-weight: normal;
-  font-style: bold;
+  font-display: swap;
+  src: local('Kozuka Gothic Pro R'), url('/assets/fonts/KozGoProRegular.woff') format('woff');
 }
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

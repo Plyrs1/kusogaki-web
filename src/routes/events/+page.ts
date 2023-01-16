@@ -15,7 +15,7 @@ async function getEvents(fetch: (url: string, options: RequestInit) => Promise<R
       } 
     } 
   }`
-  const variables = { activity: activityId } // { activity: 250299436}
+  const variables = { activity: activityId }
   const res = await fetch('https://graphql.anilist.co/', {
     headers: {
       accept: 'application/json',
@@ -46,7 +46,5 @@ export const load = (async ({ fetch }) => {
   )
     .flat()
     .sort((a: EventData, b: EventData) => (a.startDate.getTime() > b.startDate.getTime() ? -1 : 1))
-
-  // const eventData : Array<EventData> = await getEvents(fetch, 250299436)
   return { eventData }
 }) satisfies PageLoad
