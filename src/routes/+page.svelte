@@ -1,3 +1,11 @@
+<script>
+  import Meta from '$src/lib/components/Meta.svelte'
+</script>
+
+<Meta
+  title="Home"
+  description="This is just a placeholder so the embed looks nice and full. I don't know what else to write so I'll just tell you a story about a chicken. Once upon a time, there's a mom chicken that laid an egg. Mom chicken takes care of the egg everyday. She keep it warm, giving motherly love to it since the first time it came out to the world. But in an unfortunate day, an evil human came to mom chicken and took the egg she loved and raised with utmost care. Mom chicken became sad, she cried everyday, until she got fed up of this cruel life and walked to the nearest KFC to give up her life."
+/>
 <div class="flex flex-col w-full h-4/6">
   <div class="flex-grow" />
   <div
