@@ -1,5 +1,6 @@
 <script lang="ts">
   import { assets } from '$app/paths'
+  import Meta from '$src/lib/components/Meta.svelte'
   interface TeamBadge {
     name: string
     color: string
@@ -150,6 +151,7 @@
   ]
 </script>
 
+<Meta title="Team Member" description="Say hello to our team members!" image="{assets}/assets/img/embed1.jpg" />
 <div class="grid w-full place-items-center">
   <div class="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-6">
     {#each teamData as team}
