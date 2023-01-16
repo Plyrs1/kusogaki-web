@@ -6,4 +6,5 @@
     <h1 class="text-white">Welcome to</h1>
     <h1 class="text-kusogaki-purple -my-5 md:-my-8 lg:-my-10">Kusogaki</h1>
   </div>
+  <div class="h-1/4" />
 </div>

@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Monsterrat', ...defaultTheme.fontFamily.sans]
+        sans: ['Monsterrat', ...defaultTheme.fontFamily.sans],
+        'lemon-milk': ['Lemon\\ Milk'],
+        'kozuka-gothic': ['Kozuka\\ Gothic']
       },
       colors: {
         'kusogaki-purple': '#6167c5',

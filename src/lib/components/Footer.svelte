@@ -8,11 +8,11 @@
   <div class="fixed -bottom-12 lg:bottom-0 right-0 w-full h-1/4 -rotate-12 lg:-rotate-6 origin-top-right">
     <Wave className="fill-kusogaki-purple" />
   </div>
-  <div class="fixed right-0 bottom-0 grid grid-cols-3 gap-2 py-4 lg:py-10">
+  <div class="fixed right-0 bottom-0 grid grid-cols-3 gap-2 py-4 lg:py-10 font-lemon-milk">
     <div class="col-span-2">
-      <p class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-[-5px_-5px_0px_rgb(97,103,197)]">クソガキ</p>
+      <p class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-[-5px_-5px_0px_rgb(97,103,197)] font-kozuka-gothic">クソガキ</p>
     </div>
-    <div class="text-left grid content-end shrink text-[0.5rem] sm:text-xs md:text-sm lg:text-lg ">
+    <div class="text-left grid content-end shrink text-[0.5rem] sm:text-xs md:text-sm lg:text-lg font-light">
       <p class="text-white">/KU SO GA KI/</p>
       <p class="text-white font-bold">CREW</p>
     </div>

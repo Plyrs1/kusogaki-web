@@ -39,7 +39,7 @@
   <div class="flex flex-wrap items-center justify-between m-0 p-4 md:p-8">
     <a
       href="{base}/#"
-      class="text-4xl lg:text-5xl font-semibold whitespace-nowrap items-center z-20 self-center  text-kusogaki-purple"
+      class="text-4xl lg:text-5xl font-kozuka-gothic font-bold whitespace-nowrap items-center z-20 self-center text-kusogaki-purple"
       on:click={isNavbarOpen ? toggleNavbar : null}
       >クソガキ
     </a>
@@ -61,7 +61,7 @@
           <li class="py-4">
             <a
               href="{base}{navItem.href}"
-              class="text-4xl text-kusogaki-purple font-semibold {currentPage === navItem.href ? 'active' : ''}"
+              class="text-3xl text-kusogaki-purple font-lemon-milk {currentPage === navItem.href ? 'active' : ''}"
               on:click={toggleNavbar}>{navItem.label}</a
             >
           </li>

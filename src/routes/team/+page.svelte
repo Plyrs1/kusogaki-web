@@ -107,7 +107,7 @@
     },
     {
       name: 'imr1zen',
-      pic: `${assets}/profile.jpg`,
+      pic: `${assets}/assets/img/profile.jpg`,
       profileUrl: 'https://anilist.co/user/imr1zen/',
       badges: [6]
     },
@@ -119,13 +119,13 @@
     },
     {
       name: 'Naizuri',
-      pic: `${assets}/profile.jpg`,
+      pic: `${assets}/assets/img/profile.jpg`,
       profileUrl: 'https://anilist.co/user/Naizuri',
       badges: [6]
     },
     {
       name: 'Rythym',
-      pic: `${assets}/profile.jpg`,
+      pic: `${assets}/assets/img/profile.jpg`,
       profileUrl: 'https://anilist.co/user/Rythym/',
       badges: [6]
     },
@@ -137,7 +137,7 @@
     },
     {
       name: 'TastyLemonss',
-      pic: `${assets}/profile.jpg`,
+      pic: `${assets}/assets/img/profile.jpg`,
       profileUrl: 'https://anilist.co/user/TastyLemonss/',
       badges: [6]
     },
@@ -152,7 +152,7 @@
 
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 px-6">
   {#each teamData as team}
-    <div class=" bg-kusogaki-purple rounded-md">
+    <div class=" bg-kusogaki-purple rounded-md font-lemon-milk">
       <div class="overflow-hidden w-full h-min">
         <a href={team.profileUrl} target="_blank" rel="noreferrer">
           <img class="rounded-t-md w-full hover:scale-110 hover:rotate-6 duration-300" src={team.pic} alt="" />
