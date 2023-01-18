@@ -14,7 +14,7 @@
     </div>
     <div class="text-left grid content-end shrink text-[0.5rem] sm:text-xs md:text-sm lg:text-lg font-light">
       <p class="text-white">/KU SO GA KI/</p>
-      <p class="text-white font-bold">CREW</p>
+      <!-- <p class="text-white font-bold">CREW</p> -->
     </div>
     <div class="col-span-2 text-white text-[0.5rem] sm:text-xs md:text-sm lg:text-lg font-bold">
       <a href="{base}/events">EVENTS</a> . <a href="{base}/community">COMMUNITY</a> . <a href="{base}/badges">BADGES</a>
