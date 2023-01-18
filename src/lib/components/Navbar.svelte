@@ -15,7 +15,8 @@
     { label: 'Home', href: '/' },
     { label: 'About Us', href: '/about' },
     { label: 'Team', href: '/team' },
-    { label: 'Events', href: '/events' }
+    { label: 'Events', href: '/events' },
+    { label: 'FAQ', href: '/faq' }
   ]
 
   let isNavbarOpen = false
