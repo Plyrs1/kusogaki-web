@@ -1,5 +1,6 @@
 <script lang="ts">
   import { assets } from '$app/paths'
+  import ImageLoad from '$lib/components/ImageLoad.svelte'
   import Meta from '$src/lib/components/Meta.svelte'
 
   import type { PageData } from './$types'
@@ -12,9 +13,9 @@
   <div class="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-6">
     {#each data.teamData as team}
       <div class=" bg-kusogaki-purple rounded-md font-lemon-milk">
-        <div class="overflow-hidden w-full h-min">
+        <div class="grid overflow-hidden w-full aspect-square rounded-t-md">
           <a href={team.profileUrl} target="_blank" rel="noreferrer">
-            <img class="rounded-t-md w-full hover:scale-110 hover:rotate-6 duration-300" src={team.pic} alt="" loading="lazy" />
+            <ImageLoad className="hover:scale-110 hover:rotate-6 duration-300" src={team.pic} alt="" />
           </a>
         </div>
         <div class="m-2">

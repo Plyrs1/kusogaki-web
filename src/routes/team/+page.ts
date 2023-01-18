@@ -50,7 +50,7 @@ const teamData: Array<TeamData> = [
   },
   {
     name: 'PantsuGod',
-    pic: 'https://discordav.deno.dev/322380817122721792',
+    pic: `${assets}/assets/img/profile.jpg`,
     profileUrl: 'https://anilist.co/user/PantsuGod/',
     badges: [3]
   },
