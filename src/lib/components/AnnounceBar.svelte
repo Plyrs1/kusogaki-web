@@ -13,6 +13,7 @@
       ? 'text-white'
       : ''} whitespace-nowrap text-ellipsis overflow-hidden right-0"
   >
+    <slot />
     {message}
   </div>
 </div>
