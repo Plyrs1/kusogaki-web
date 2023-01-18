@@ -7,11 +7,11 @@
 
 <div class="flex justify-center w-full h-full bg-gray-600 {!isImgLoaded ? 'animated-background opacity-60' : ''}">
   <img
+    loading="lazy"
     {src}
     class="{className} duration-1000 {!isImgLoaded ? 'opacity-0' : 'opacity-100'}"
     on:load|once={() => (isImgLoaded = true)}
     {alt}
-    loading="lazy"
   />
 </div>
 
