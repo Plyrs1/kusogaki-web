@@ -5,7 +5,7 @@ const faqLists: Array<FaqData> = [
   {
     question: 'How do I know when an event starts?',
     answer:
-      'When you subscribe to this forum thread, you\'ll receive a notification when any events start. Make sure "When someone replies to a forum thread I\'m subscribed to" in notification settings is ticked. <img src="https://i.imgur.com/dL85tK4.png" /><br />For more information, visit our event thread here: <a href="https://anilist.co/forum/thread/15218/1">https://anilist.co/forum/thread/15218/1</a>'
+      'When you subscribe to this forum thread, you\'ll receive a notification when any events start. Make sure "When someone replies to a forum thread I\'m subscribed to" in notification settings is ticked. <img src="https://i.imgur.com/dL85tK4.png" /><br />For more information, visit our event thread here: <a href="https://anilist.co/forum/thread/15218/1" target="_blank" rel="noreferrer">https://anilist.co/forum/thread/15218/1</a>'
   },
   {
     question: 'How do I participate?',
@@ -25,7 +25,7 @@ const faqLists: Array<FaqData> = [
   {
     question: 'Can I join the Events Team?',
     answer:
-      'Yes, you may take a shot at joining! If you\'re lucky and good enough, you\'ll get accepted! More info on what positions are available can be found here: <a href="https://anilist.co/activity/96889265">https://anilist.co/activity/96889265</a>'
+      'Yes, you may take a shot at joining! If you\'re lucky and good enough, you\'ll get accepted! More info on what positions are available can be found here: <a href="https://anilist.co/activity/96889265" target="_blank" rel="noreferrer">https://anilist.co/activity/96889265</a>'
   }
 ]
 
