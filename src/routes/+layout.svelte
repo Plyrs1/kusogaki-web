@@ -1,10 +1,10 @@
 <script lang="ts">
   import '$lib/main.css'
 
+  import { page } from '$app/stores'
   import Footer from '$lib/components/Footer.svelte'
   import Navbar from '$lib/components/Navbar.svelte'
   import { isScrolled } from '$lib/stores/page'
-  import { page } from '$app/stores'
   import AnnounceBar from '$src/lib/components/AnnounceBar.svelte'
   function scrollDetect(el: Event): void {
     $isScrolled = (el.target as HTMLDivElement).scrollTop > 100

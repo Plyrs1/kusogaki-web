@@ -4,7 +4,7 @@
 </script>
 
 <div
-  class="w-fit max-w-xs sm:max-w-sm md:max-w-md xl:max-w-lg 2xl:max-w-xl p-2 mb-4 text-gray-500 {!isDark
+  class="w-fit max-w-xs sm:max-w-sm md:max-w-md xl:max-w-lg 2xl:max-w-xl p-2 mb-4 {!isDark
     ? 'bg-white'
     : 'bg-kusogaki-purple'} rounded-l-full shadow right-0"
 >
