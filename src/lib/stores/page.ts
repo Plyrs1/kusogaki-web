@@ -7,6 +7,8 @@ interface PageData {
   color?: string
 }
 
-export const isScrolled: Writable<boolean> = writable(false)
-export const site: Writable<PageData> = writable({})
-export const scrollOffset: Writable<number> = writable(0)
+const isScrolled: Writable<boolean> = writable(false)
+const site: Writable<PageData> = writable({})
+const scrollOffset: Writable<number> = writable(0)
+
+export { isScrolled, scrollOffset, site }

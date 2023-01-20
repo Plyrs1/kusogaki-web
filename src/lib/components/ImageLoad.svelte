@@ -3,9 +3,10 @@
   export let src = ''
   export let alt = 'Image'
   export let className: string
+  export let loadingOpacity = 'opacity-60'
 </script>
 
-<div class="flex justify-center w-full h-full bg-gray-600 {!isImgLoaded ? 'animated-background opacity-60' : ''}">
+<div class="flex justify-center w-full h-full {!isImgLoaded ? 'bg-gray-600 animated-background ' + loadingOpacity : ''}">
   {#if src !== ''}
     <img
       loading="lazy"
