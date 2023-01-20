@@ -1,7 +1,7 @@
 interface EventData {
   title: string
   img: string
-  href: string
+  url: string
   startDate: Date
   likes: number
 }
