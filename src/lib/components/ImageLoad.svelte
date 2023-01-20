@@ -1,18 +1,20 @@
 <script lang="ts">
   let isImgLoaded = false
-  export let src: string
+  export let src = ''
   export let alt = 'Image'
   export let className: string
 </script>
 
 <div class="flex justify-center w-full h-full bg-gray-600 {!isImgLoaded ? 'animated-background opacity-60' : ''}">
-  <img
-    loading="lazy"
-    {src}
-    class="{className} duration-1000 {!isImgLoaded ? 'opacity-0' : 'opacity-100'}"
-    on:load|once={() => (isImgLoaded = true)}
-    {alt}
-  />
+  {#if src !== ''}
+    <img
+      loading="lazy"
+      {src}
+      class="{className} duration-1000 {!isImgLoaded ? 'opacity-0' : 'opacity-100'}"
+      on:load|once={() => (isImgLoaded = true)}
+      {alt}
+    />
+  {/if}
 </div>
 
 <style>
