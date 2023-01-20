@@ -9,3 +9,4 @@ interface PageData {
 
 export const isScrolled: Writable<boolean> = writable(false)
 export const site: Writable<PageData> = writable({})
+export const scrollOffset: Writable<number> = writable(0)

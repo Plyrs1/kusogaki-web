@@ -4,10 +4,14 @@
   import { page } from '$app/stores'
   import Footer from '$lib/components/Footer.svelte'
   import Navbar from '$lib/components/Navbar.svelte'
-  import { isScrolled } from '$lib/stores/page'
+  import { isScrolled, scrollOffset } from '$lib/stores/page'
   import AnnounceBar from '$src/lib/components/AnnounceBar.svelte'
   function scrollDetect(el: Event): void {
-    $isScrolled = (el.target as HTMLDivElement).scrollTop > 100
+    const scrollTop = (el.target as HTMLDivElement).scrollTop
+    const scrollHeight = (el.target as HTMLDivElement).scrollHeight
+    const clientHeight = (el.target as HTMLDivElement).clientHeight
+    $isScrolled = scrollTop > 100
+    $scrollOffset = scrollHeight - clientHeight - scrollTop
   }
   function onClickScroll(el: HTMLElement): void {
     el.scrollIntoView({
