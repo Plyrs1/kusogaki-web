@@ -7,7 +7,6 @@
   import Badge from '$src/lib/components/Badge.svelte'
 
   import type { BadgeData, BadgeItemApiData } from './badges'
-
   let allData: Array<BadgeData> = []
   let currentPage = 1
   let hasMore = true
@@ -22,12 +21,14 @@
       author = item.expand.user.name
       url = `https://anilist.co/user/${item.expand.user.anilistId}`
     }
+    let accent = item.type === 'Official' ? 'green' : item.type === 'Unofficial' ? 'red' : ''
     return {
       author,
       url,
       src: item.img || '',
       eventName: item.expand.event.title || '',
-      eventUrl: item.expand.event.url || '/#'
+      eventUrl: item.expand.event.url || '/#',
+      accent
     } satisfies BadgeData
   })
   async function fetchData() {
@@ -35,7 +36,7 @@
     try {
       isLoadingData = true
       const response = await fetch(
-        `https://kusogaki-backend.plyrs.party/api/collections/badges/records?expand=event,user&sort=-event.startDate&perPage=18&page=${currentPage}`
+        `https://kusogaki-backend.plyrs.party/api/collections/badges/records?expand=event,user&sort=-event.startDate,-created&perPage=24&page=${currentPage}`
       )
       const data = await response.json()
       newData = data.items.map((item: BadgeItemApiData) => {
@@ -60,17 +61,17 @@
     if (offset < 100 && hasMore) await fetchData()
   })
 
-  //   onMount(fetchData)
+  // onMount(fetchData)
   onDestroy(unsubscribeScroll)
 </script>
 
 <Meta title="Badges" description="Moar badges plezz!!!" />
 <div class="grid w-full place-items-center font-lemon-milk">
-  <div class="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 px-6">
+  <div class="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-4 px-6">
     {#each allData as badge}
       <Badge {...badge} />
     {/each}
-    {#if allData.length === 0}
+    {#if allData.length === 0 || isLoadingData}
       {#each Array(24) as _}
         <div class="rounded-md">
           <div class="grid overflow-hidden w-full aspect-[3/4] rounded-md">
