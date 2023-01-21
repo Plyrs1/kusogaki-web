@@ -9,15 +9,23 @@ interface BadgeData {
   eventUrl?: string
 }
 
-interface ExpandedEventData {
+interface UserData {
+  anilistId: string
+  name: string
+  role: Array<string>
+  username: string
+}
+
+interface ExpandedBadgeData {
   event: EventData
+  user: UserData
 }
 
 interface BadgeItemApiData {
   img: string
   creator: string
-  creatorProfile: string
-  expand: ExpandedEventData
+  creatorAnilistId: number
+  expand: ExpandedBadgeData
 }
 interface BadgePageApiData {
   page: number

@@ -9,13 +9,13 @@
 </script>
 
 <div class="bg-kusogaki-purple rounded-md border-l-8 {accent}">
-  <a href={eventUrl}>
+  <a href={eventUrl} target="_blank" rel="noreferrer">
     <div class="grid overflow-hidden w-full aspect-[3/4] rounded-t-md p-3">
       <ImageLoad className="rounded-lg" {src} alt={eventName} loadingOpacity="opacity-30" />
     </div>
   </a>
   <div class="pb-2">
-    <a href={url}><h5 class="text-xs md:text-sm lg:text-lg text-white">{author}</h5></a>
+    <a href={url} target="_blank" rel="noreferrer"><h5 class="text-xs md:text-sm lg:text-lg text-white">{author}</h5></a>
   </div>
 </div>
 <!-- uncomment to add like and user count -->
