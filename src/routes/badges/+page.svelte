@@ -16,9 +16,15 @@
   let badgeData: Array<BadgeData> = []
   $: allData = [...allData, ...badgeData]
   $: badgeData = newData.map((item) => {
+    let author = item.creator || 'Kusogaki'
+    let url = `https://anilist.co/user/${item.creatorAnilistId || 'Kusogaki'}`
+    if (item.expand.user) {
+      author = item.expand.user.name
+      url = `https://anilist.co/user/${item.expand.user.anilistId}`
+    }
     return {
-      author: item.creator || 'Kusogaki',
-      url: item.creatorProfile || 'https://anilist.co/user/Kusogaki',
+      author,
+      url,
       src: item.img || '',
       eventName: item.expand.event.title || '',
       eventUrl: item.expand.event.url || '/#'
@@ -29,7 +35,7 @@
     try {
       isLoadingData = true
       const response = await fetch(
-        `https://kusogaki-backend.plyrs.party/api/collections/badges/records?expand=event&sort=-event.startDate&perPage=18&page=${currentPage}`
+        `https://kusogaki-backend.plyrs.party/api/collections/badges/records?expand=event,user&sort=-event.startDate&perPage=18&page=${currentPage}`
       )
       const data = await response.json()
       newData = data.items.map((item: BadgeItemApiData) => {
