@@ -20,11 +20,11 @@ interface ExpandedBadgeData {
   event: EventData
   user: UserData
 }
-
 interface BadgeItemApiData {
   img: string
   creator: string
   creatorAnilistId: number
+  type: string
   expand: ExpandedBadgeData
 }
 interface BadgePageApiData {

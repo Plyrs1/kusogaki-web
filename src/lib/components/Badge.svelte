@@ -1,6 +1,24 @@
 <script lang="ts">
+  function accentParse(color: string): string {
+    switch (color) {
+      case 'purple':
+        return 'border-kusogaki-purple'
+      case 'blue':
+        return 'border-kusogaki-blue'
+      case 'red':
+        return 'border-kusogaki-red'
+      case 'yellow':
+        return 'border-kusogaki-yellow'
+      case 'cyan':
+        return 'border-kusogaki-cyan'
+      case 'green':
+        return 'border-kusogaki-green'
+      default:
+        return 'border-gray-400'
+    }
+  }
   export let author = ''
-  export let accent = 'border-gray-400'
+  export let accent = ''
   export let src = ''
   export let url = '/#'
   export let eventName = ''
@@ -8,7 +26,7 @@
   import ImageLoad from './ImageLoad.svelte'
 </script>
 
-<div class="bg-kusogaki-purple rounded-md border-l-8 {accent}">
+<div class="bg-kusogaki-purple rounded-md border-l-8 {accentParse(accent)}">
   <a href={eventUrl} target="_blank" rel="noreferrer">
     <div class="grid overflow-hidden w-full aspect-[3/4] rounded-t-md p-3">
       <ImageLoad className="rounded-lg" {src} alt={eventName} loadingOpacity="opacity-30" />
