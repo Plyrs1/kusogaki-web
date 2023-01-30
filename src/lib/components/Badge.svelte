@@ -29,7 +29,7 @@
 <div class="bg-kusogaki-purple rounded-md border-l-8 {accentParse(accent)}">
   <a href={eventUrl} target="_blank" rel="noreferrer">
     <div class="grid overflow-hidden w-full aspect-[3/4] rounded-t-md p-3">
-      <ImageLoad className="rounded-lg" {src} alt={eventName} loadingOpacity="opacity-30" />
+      <ImageLoad className="rounded-lg" {src} alt={eventName} loadingOpacity="opacity-30" size="m" />
     </div>
   </a>
   <div class="pb-2">
