@@ -38,7 +38,9 @@
 </script>
 
 <nav class="w-full">
-  <div class="fixed top-0 left-0 w-full h-48 md:h-56 lg:h-64 {$isScrolled ? '' : '-rotate-12'} origin-bottom-left z-10 duration-500">
+  <div
+    class="fixed top-0 left-0 w-full h-48 md:h-56 lg:h-64 {$isScrolled ? '' : '-rotate-12'} origin-bottom-left z-10 duration-500 pointer-events-none"
+  >
     <Wave className="fill-white opacity-60" flip={true} />
   </div>
   <div class="flex flex-wrap items-center justify-between m-0 p-4 md:p-8">
