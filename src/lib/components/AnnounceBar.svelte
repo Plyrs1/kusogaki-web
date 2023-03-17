@@ -1,6 +1,7 @@
 <script lang="ts">
   export let isDark = false
   export let message = ''
+  export let date = ''
 </script>
 
 <div
@@ -13,7 +14,7 @@
       ? 'text-white'
       : ''}"
   >
-    <slot />
     {message}
+    <p class="text-right text-xs">{date}</p>
   </div>
 </div>
