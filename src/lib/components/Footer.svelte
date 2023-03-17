@@ -5,7 +5,7 @@
 </script>
 
 <div class="fixed bottom-0 left-0 right-0">
-  <div class="fixed -bottom-12 lg:bottom-0 right-0 w-full h-1/4 -rotate-12 lg:-rotate-6 origin-top-right">
+  <div class="fixed -bottom-12 lg:bottom-0 right-0 w-full h-1/4 -rotate-12 lg:-rotate-6 origin-top-right pointer-events-none">
     <Wave className="fill-kusogaki-purple" />
   </div>
   <div class="fixed right-0 bottom-0 grid grid-cols-3 gap-2 py-4 lg:py-10 font-lemon-milk">

@@ -1,12 +1,12 @@
 <script lang="ts">
   import '$lib/main.css'
 
+  import { afterNavigate } from '$app/navigation'
   import { page } from '$app/stores'
   import Footer from '$lib/components/Footer.svelte'
   import Navbar from '$lib/components/Navbar.svelte'
   import { isScrolled, scrollOffset } from '$lib/stores/page'
   import AnnounceBar from '$src/lib/components/AnnounceBar.svelte'
-  import { afterNavigate } from '$app/navigation'
   function scrollDetect(el: Event): void {
     const scrollTop = (el.target as HTMLDivElement).scrollTop
     const scrollHeight = (el.target as HTMLDivElement).scrollHeight
