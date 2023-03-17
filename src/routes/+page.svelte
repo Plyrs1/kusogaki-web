@@ -20,6 +20,10 @@
       console.error(error)
     }
   }
+  function formatDate(date: string) {
+    const d = new Date(date).toDateString().split(' ')
+    return `${d[1]} ${d[2]}`
+  }
   onMount(fetchData)
 </script>
 
@@ -30,7 +34,9 @@
 {#if announcementData.length > 0}
   <div class="fixed grid right-0 gap-4 justify-items-end" in:fly={{ x: 200 }}>
     {#each announcementData as announcementList, index}
-      <a href={announcementList.url} target="_blank" rel="noreferrer"><AnnounceBar message={announcementList.title} isDark={index !== 0} /></a>
+      <a href={announcementList.url} target="_blank" rel="noreferrer"
+        ><AnnounceBar message={announcementList.title} date={formatDate(announcementList.startDate)} isDark={index !== 0} /></a
+      >
     {/each}
   </div>
 {/if}
