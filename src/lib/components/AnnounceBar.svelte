@@ -16,5 +16,6 @@
   >
     {message}
     <p class="text-right text-xs">{date}</p>
+    <slot />
   </div>
 </div>
