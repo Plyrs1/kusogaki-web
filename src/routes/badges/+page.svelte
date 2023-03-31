@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onDestroy } from 'svelte'
+  import { onDestroy, onMount } from 'svelte'
 
   import ImageLoad from '$lib/components/ImageLoad.svelte'
   import Meta from '$lib/components/Meta.svelte'
@@ -57,11 +57,10 @@
   }
 
   const unsubscribeScroll = scrollOffset.subscribe(async (offset: number) => {
-    if (isLoadingData) return
     if (offset < 100 && hasMore) await fetchData()
   })
 
-  // onMount(fetchData)
+  onMount(fetchData)
   onDestroy(unsubscribeScroll)
 </script>
 
