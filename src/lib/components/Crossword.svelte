@@ -8,6 +8,7 @@
   export let currentQuestion: Writable<number>
   let previousQuestion = 0
   let isFakeFocus = false
+  let isFocusClick = true
   let currentQuestionData: CrosswordQuestion
 
   const maxCellX = Math.max(...crosswordConfig.map((i) => (i.direction === 'across' ? i.x + i.length : 0)))
@@ -39,22 +40,25 @@
     resetAllCellsColor()
     previousQuestion = question
     currentQuestionData = crosswordConfig.find((q) => q.number === question) ?? crosswordConfig[0]
-    if (!!currentQuestionData && currentQuestionData.direction === 'across') {
+    if (!currentQuestionData) return
+    if (currentQuestionData.direction === 'across') {
       for (let x = 0; x < currentQuestionData.x + currentQuestionData.length; x++) {
         const cell = document.getElementById(`cell-${currentQuestionData.x + x}-${currentQuestionData.y}`)
-        if (cell) {
-          cell.classList.add('bg-kusogaki-purple')
-          cell.classList.add('bg-opacity-30')
-        }
+        if (!cell) continue
+        cell.classList.add('bg-kusogaki-purple')
+        cell.classList.add('bg-opacity-30')
+        if (!isFocusClick && x == 0) cell.focus()
+        isFocusClick = false
       }
     }
-    if (!!currentQuestionData && currentQuestionData.direction === 'down') {
+    if (currentQuestionData.direction === 'down') {
       for (let y = 0; y < currentQuestionData.y + currentQuestionData.length; y++) {
         const cell = document.getElementById(`cell-${currentQuestionData.x}-${currentQuestionData.y + y}`)
-        if (cell) {
-          cell.classList.add('bg-kusogaki-purple')
-          cell.classList.add('bg-opacity-30')
-        }
+        if (!cell) continue
+        cell.classList.add('bg-kusogaki-purple')
+        cell.classList.add('bg-opacity-30')
+        if (!isFocusClick && y == 0) cell.focus()
+        isFocusClick = false
       }
     }
   })
@@ -99,6 +103,7 @@
 
   function inputMouseDown() {
     isFakeFocus = false
+    isFocusClick = true
   }
 
   function inputDblClick(e: MouseEvent, cell: Array<number>) {
